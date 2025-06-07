@@ -73,24 +73,11 @@ python build_toy_problem.py
 ## Q&A: Flow Matching Concepts
 
 #### Q1: Are we trying to learn an approximation to the flow?
-Yes — more precisely, we are learning an approximation to the vector field that defines the flow.
-
-The flow is a collection of trajectories — solutions to a differential equation.
-
-These trajectories are induced by a vector field v(x, t).
-
-We train a neural network to approximate this vector field.
-
-Once the vector field is learned, we can compute the flow by integrating it over time starting from a noise sample.
+Yes — more precisely, we are learning an approximation to the vector field that defines the flow. The flow is a collection of trajectories — solutions to a differential equation. These trajectories are induced by a vector field v(x, t). We train a neural network to approximate this vector field. Once the vector field is learned, we can compute the flow by integrating it over time starting from a noise sample.
 
 #### Q2: Is the neural network predicting the vector field at different points?
-Exactly.
 
-The network takes input: a position x and a time t.
-
-It outputs a velocity vector v(x, t), representing the direction and speed of motion at that point in space-time.
-
-This defines a time-dependent vector field, which we can integrate to produce trajectories (the flow).
+Exactly.The network takes input: a position x and a time t. It outputs a velocity vector v(x, t), representing the direction and speed of motion at that point in space-time.This defines a time-dependent vector field, which we can integrate to produce trajectories (the flow).
 
 #### Q3: What's the difference between a vector field, flow, and dx/dt?
 
@@ -116,4 +103,4 @@ After training, we can generate flows by integrating from x0 using the learned v
 ## References
 Lipman et al., "Flow Matching for Generative Modeling", NeurIPS 2023
 
-Song et al., "Score-Based Generative Modeling through SDEs"
+Song et al., "Score-Based Generative Modeling through SDEs
